@@ -12,3 +12,5 @@ const debounce = (fn, t) =>  {
         }, t);
     }
 }
+
+export default debounce;

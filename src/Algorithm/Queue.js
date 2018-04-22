@@ -23,6 +23,9 @@ class Queue {
         this.head = 0;
     }
 
+    has(item) {
+    }
+
     size() {
         return this.tail - this.head;
     }
