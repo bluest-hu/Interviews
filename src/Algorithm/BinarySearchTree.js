@@ -63,7 +63,6 @@ const maxNode = (node) => {
         while(node && node.right !== null) {
             node = node.right;
         }
-
         return node.key;
     }
     return null;
