@@ -11,6 +11,7 @@ module.exports = {
 		},
 		devServer: {
 			hot: true,
+			clientLogLevel: "none",
 		},
     plugins: [
         new HtmlWebpackPlugin({

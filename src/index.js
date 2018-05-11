@@ -3,7 +3,7 @@
 // import Debounce from './Algorithm/Debounce.js';
 // import Throttle from './Algorithm/Throttle.js';
 // import BinarySearchTree from './Algorithm/BinarySearchTree.js';
-
+import Promise from './Algorithm/Promise';
 // var list = [1, 2, 3, 4, 5, 6];
 // console.log(Shuffle(list));
 
@@ -176,6 +176,14 @@
 // }, () => {
 
 // });
-
+new Promise((resolve, reject) => {
+	setTimeout(function () {
+		resolve();
+	}, 1000);
+}).then(() => {
+ console.log('我最后执行')
+ console.log(this);
+}, () => {
+});
 
 console.log('this is a test');
