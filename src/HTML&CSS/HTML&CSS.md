@@ -35,7 +35,7 @@
 	- `diaplay:inline-clock;text-align:center`
 - 定位
 	- 父： `position: relative`
-	- 子： `postion: asolute;left: 50%;transform: translateX(-50%);`
+	- 子： `position: asolute;left: 50%;transform: translateX(-50%);`
 	- 子(定宽)：`postion: asolute;left: 50%;margin-left: 0.5*width`
 - flex
 	- `display: flex;justify-content: center;`
