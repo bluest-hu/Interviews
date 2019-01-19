@@ -15,40 +15,38 @@
 
 ```javascript
 function getType(obj) {
-    // IE 6
-    // IE6中，却会出现以下问题：通过Object.prototype.toString.call获取的 字符串,undefined,null均为Object
-    if (null === value) {
-			return 'null';
-		}
-		var type = typeof value;
-		
-    if ('undefined' === type || 'string' === type) {
-        return type;
-    }
-    return Object.prototype.toString.call(obj).slice(8, -1);
-    // [Object Array]
+	// IE 6
+	// IE6中，却会出现以下问题：通过Object.prototype.toString.call获取的 字符串,undefined,null均为Object
+	if ( null === value) {
+		return 'null';
+	}
+	var type = typeof value;
+	
+	if ('undefined' === type || 'string' === type) {
+			return type;
+	}
+	return Object.prototype.toString.call(obj).slice(8, -1);
+	// [Object Array]
 }
 ```
 
 ### 深度克隆
 
-
 ```javascript
 function getType(obj) {
-    // IE 6
-    // IE6中，却会出现以下问题：通过Object.prototype.toString.call获取的 字符串,undefined,null均为Object
-    if (null === value) {
-			return 'null';
-		}
-		var type = typeof value;
-		
-    if ('undefined' === type || 'string' === type) {
-        return type;
-    }
-    return Object.prototype.toString.call(obj).slice(8, -1);
-    // [Object Array]
+	// IE 6
+	// IE6中，却会出现以下问题：通过Object.prototype.toString.call获取的 字符串,undefined,null均为Object
+	if (null === value) {
+		return 'null';
+	}
+	var type = typeof value;
+	
+	if ('undefined' === type || 'string' === type) {
+			return type;
+	}
+	return Object.prototype.toString.call(obj).slice(8, -1);
+	// [Object Array]
 }
-
 
 function cloneDeep(target) {
 	var res;
@@ -61,7 +59,6 @@ function cloneDeep(target) {
 		}):
 	} else if (type) === 'Object') {
 		res = {};
-
 		for (var i in target) {
 			if (target.hasOwnProperty(i)) {
 				res[i] = cloneDeep[target[i]]
@@ -72,4 +69,8 @@ function cloneDeep(target) {
 	}
 }
 ```
+
+## 原型链
+
+
 
